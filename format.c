@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
     va_start(args, format);
     int i;
     unsigned char* str;
+    char character;
 
     for (i = 0; format[i] != '\0'; i++)
     {
@@ -42,7 +43,7 @@ int _printf(const char *format, ...)
         else if (format[i] == 'c')
         {
             char c = (char)va_arg(args, char*);
-            printf("%c", str);
+            printf("%c", character);
         }
 
         }
