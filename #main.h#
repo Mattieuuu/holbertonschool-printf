@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-void fonction();
+
 
 int _printf(const char *format, ...);
 int print_recursive(int num);
