@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
     va_list args;
     va_start(args, format);
     int i;
-    int result;
     unsigned char* str;
 
     for (i = 0; format[i] != '\0'; i++)
@@ -53,5 +52,4 @@ int _printf(const char *format, ...)
         }
     }
 
-    return(result);
 }
