@@ -87,6 +87,7 @@ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c -o printf.c
 
 ### Teste de la fonction printf :
 Tester avec UBuntu 22.04 .
+
 ![Mon Image](./image.png)
 
 
