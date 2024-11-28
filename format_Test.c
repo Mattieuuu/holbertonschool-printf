@@ -13,7 +13,7 @@ va_list args;
 int count = 0;
 const char *i;
 
-list_t handler[] = {
+format_t handler[] = {
 {'c', print_char},
 {'s', print_str},
 {'%', print_perc},
@@ -54,7 +54,7 @@ return (count);
  * Return: number of character to print for specifier
  */
 
-int handle_spe(char type, va_list args, list_t
+int handle_spe(char type, va_list args, format_t
 handler[])
 {
 int i;
