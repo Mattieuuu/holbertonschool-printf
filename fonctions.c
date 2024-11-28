@@ -1,46 +1,88 @@
-#include <unistd.h> 
 
+#include <stdarg.h>
+#include <stdio.h>
+#include "main.h"
+#include <unistd.h>
 
-int print_recursive(int num)
+int _putchar(char c)
 {
-int count = 0 ;
-char digit;
-if (num >= 10)
-{
-count += print_recursive(num/10);
+    return write(1, &c, 1);
 }
-digit = (num % 10) + '0';
-write(1, &digit , 1);
-count++;
-return count;
-}
-int print_number (int num)
+
+int _printf(const char *format, ...)
 {
+    va_list args;
+    int count = 0;
+    const char *i;
+
+    list_t handler[] = {
+        {'c', print_char},
+        {'s', print_str},
+        {'%', print_perc},
+        {'d', print_num},
+        {'i', print_num},
+        {'\0', NULL}
+    };
+    if (format == NULL)
+    return (-1);
+    va_start(args, format);
+    for (i = format; *i != '\0'; i++)
+    {
+        if (*i == '%')
+        {
+            i++;
+            if (*i == '\0')
+            {
+                va_end(args);
+                return (-1);
+            }
+            count += hand_spe(*i, args, handler);
+        }
+        else
+        {
+            count += _putchar(*i);
+        }
+    }
+    va_end(args);
+    return (count);
+}
+
+int hand_spe(char spe, va_list args, list_t handler[])
+{
+    int index;
+    for (index = 0; handler[index].type != '\0'; index++)
+    {
+    if (handler[index].f(args))
+    {
+        return (handler[index].f(args));
+    }
+    }
+    return (_putchar('%') + _putchar(spe));
+}
+
+int print_str(va_list args)
+{
+char *string = va_arg(args, char *);
 int count = 0;
-if (num < 0)
+if (string == NULL)
 {
-write (1 , "-",1);
-num = -num;
-count++;
+    string = "(null)";
 }
-if (num == 0)
+while (*string) 
 {
-write (1 ,"0" ,1);
-return (1);
-}
-count += print_recursive(num);
-return count;
-}
-char print_char(char c)
-{
-return write( 1, &c, 1);
-}
-int print_string(char *str)
-{
-int count = 0;
-while (*str) {
-count += write(1, str, 1);
-str++;
+    count += _putchar(*string++);
 }
 return (count);
+}
+
+int print_perc(va_list args)
+{
+    (void)args;
+    return(_putchar('%'));
+}
+
+int print_char(va_list args)
+{
+    char c = va_arg(args, int);
+    return (_putchar(c));
 }
