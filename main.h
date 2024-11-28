@@ -1,24 +1,27 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-void fonction();
+#include <unistd.h>
 
-typedef struct _format
+/**
+ * struct format_t - structure for specifier of format
+ * @type: character of specifier
+ * @f: pointers of functions for specifier
+ */
+
+typedef struct format_t
 {
     char type;
-
     int (*f)(va_list);
 } list_t;
 
-int _putchar(char c);
-
 int _printf(const char *format, ...);
-int print_num(va_list args);
-int print_number(unsigned int n);
-int print_int(va_list args);
-int hand_spe(char spe, va_list args, list_t handler[]);
+int _putchar(char c);
 int print_str(va_list args);
-int print_perc(va_list args);
 int print_char(va_list args);
-
-#endif
+int print_perc(va_list args);
+int print_int(va_list args);
+int print_num(unsigned int num);
+int handle_spe(const char type, va_list args, list_t
+handler[]);
+#endif /* MAIN_H */
