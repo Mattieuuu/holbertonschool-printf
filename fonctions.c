@@ -5,17 +5,18 @@
  * @args: argument list of numbers to print
  * Return: numbers of number to print
  */
+
 int print_int(va_list args)
 {
-    int a = va_arg(args, int);
-    int count = 0;
-    if (a < 0)
-    {
-        count += _putchar('-');
-        a = -a;
-    }
-    count += print_num(a);
-    return (count);
+int a = va_arg(args, int);
+int count = 0;
+if (a < 0)
+{
+count += _putchar('-');
+a = -a;
+}
+count += print_num(a);
+return (count);
 }
 
 /**
@@ -23,6 +24,7 @@ int print_int(va_list args)
  * @num: number to print
  * Return: numbers of number to print
  */
+
 int print_num(unsigned int num)
 {
 int count = 0;
@@ -35,5 +37,5 @@ return (count);
 
 int _putchar(char c)
 {
-    return write(1, &c, 1);
+return (write(1, &c, 1));
 }
