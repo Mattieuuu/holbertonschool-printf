@@ -92,9 +92,13 @@ Tested with Ubuntu 22.04.
 
 
 
-### Flowcharts
+### Flowcharts:
 
 ![Flowcharts](./flowcharts.png)
+
+### Manpage:
+
+Access the manpage with man_3_printf
 
 ### *Author :*
 
