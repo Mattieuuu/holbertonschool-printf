@@ -91,6 +91,11 @@ Tested with Ubuntu 22.04.
 ![Mon Image](./image.png)
 
 
+
+### Flowcharts
+
+![Flowcharts](./flowcharts)
+
 ### *Author :*
 
 The printf project was developped by :
