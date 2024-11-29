@@ -91,7 +91,7 @@ Tested with Ubuntu 22.04.
 ![Mon Image](./image.png)
 
 
-### *Auteur :*
+### *Author :*
 
 The printf project was developped by :
 
