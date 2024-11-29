@@ -6,97 +6,97 @@
 ![Licence](https://img.shields.io/badge/licence-MA-green)
 
 
-### *Description :* 
-La fonction _printf est une fonction standard en langage C , elle est utilisé pour afficher des informations sur le terminal .
+### *Description:* 
+The _printf function is a standard function in the C language, used to display information on the terminal.
 
 
-### *Specificateur de format :*
+### *Format specifiers:*
 
-**%d** et **%i** : Affiche un entier.
+**%d** and **%i**: Displays an integer.
 
-**%c** : Affiche un caractère.
+**%c**: Displays a character.
 
-**%s** : Affiche une chaîne de caractères.
+**%s**: Displays a string of characters.
 
-**%%** : Affiche un symbole **%**. 
-
-
-### *Exemple d'utilisation :*  
-#### Entier
-
-Input : _printf("Le concert commence dans %d min.", 20 );
-
-Ouput : Le concert commence dans 20 min.
-
-#### Charactere
-
-Input : _printf("Affiche un charactere : %c", 'A' );
-
-Ouput : Affiche un charactere : A
-
-#### Chaine de charactere
-
-Input : _printf("%s, 'Ceci est notre premier projet.');
-
-Ouput: Ceci est notre premier projet.
+**%%**: Displays a **%** symbol. 
 
 
-### *Foncionnement interne :*
+### *Usage examples:*  
+#### Integer
 
-La fonction _printf commence par analyser la chaîne de charactere. Cette chaîne peut contenir des caractères normaux (lettres, espaces, symboles) ainsi que des spécificateurs de format (comme %s, %d, %c, etc...).
+Input: _printf("The concert starts in %d min.", 20);
 
- Caractères normaux : Les caractères qui ne sont pas précédés du symbole % sont imprimés directement.
- Spécificateurs de format : Lorsqu'un % est rencontré, cela indique qu'un spécificateur de format suit, et que l'argument approprié doit être imprimé à sa place.
+Output: The concert starts in 20 min.
 
-### *Cloner le projet via Github :*
-#### Adresse du projet _printf :
+#### Character
+
+Input: _printf("Display a character: %c", 'A');
+
+Output: Display a character: A
+
+#### String
+
+Input: _printf("%s", "This is our first project.");
+
+Output: This is our first project.
+
+
+### *Internal functioning:*
+
+The _printf function begins by analyzing the character string. This string can contain normal characters (letters, spaces, symbols) as well as format specifiers (like %s, %d, %c, etc.).
+
+ Normal characters: Characters not preceded by the % symbol are printed directly.
+ Format specifiers: When a % is encountered, it indicates that a format specifier follows, and the appropriate argument should be printed in its place.
+
+### *Cloning the project via Github:*
+#### Address of the _printf project:
 https://github.com/Mattieuuu/holbertonschool-printf
 
-Fichier  inclus dans le projet :
-- **main.h** : Déclaration des prototype de fonctions et création d'une structure . 
+Files included in the project:
+- **main.h**: Declaration of function prototypes and creation of a structure.
 
-- **main.c** : Fichier d'utilisation de printf.
+- **main.c**: File for using printf.
 
-- **Function_setting.c** : Fonction variadique pour gerer les spécificateurs de format . Initialisation des functions (_printf , handle_spe,print str ,print_perc , print_char)
+- **Function_setting.c**: Variadic function to handle format specifiers. Initialization of functions (_printf, handle_spe, print_str, print_perc, print_char)
 
-- **Function.c** : Initialisation des functions (print int,print num , _putchar)
+- **Function.c**: Initialization of functions (print_int, print_num, _putchar)
 
-### *Compilation :*
+### *Compilation:*
 
 gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c -o printf.c
 
-#### Explication des options de compilation :
-- **gcc** : Compilateur langage C .
+#### Explanation of compilation options:
+- **gcc**: C language compiler.
 
-- **-Wall** : Active tous les avertissements du compilateur.
+- **-Wall**: Activates all compiler warnings.
 
-- **-Wextra** : Active des avertissements supplémentaires pour éviter des erreurs potentielles.
+- **-Wextra**: Activates additional warnings to avoid potential errors.
 
-- **-Werror** : Traite les avertissements comme des erreurs, vous forçant à les corriger avant de compiler.
+- **-Werror**: Treats warnings as errors, forcing you to correct them before compiling.
 
-- **-pedantic** : Vérificateur strict des normes langage C .
+- **-pedantic**: Strict checker for C language standards.
 
-- **-std=gnu89** : Indique au compilateur la version à utiliser pour compiler .
+- **-std=gnu89**: Tells the compiler which version to use for compilation.
 
-- **-Wno-format** : Désactive les avertissements liées à la mauvaise utilisation des spécificateurs de format.
+- **-Wno-format**: Disables warnings related to misuse of format specifiers.
 
-- ***.c** : Les fichiers sources du projet qui seront compilés ensemble .
+- ***.c**: The project source files that will be compiled together.
 
-- **-o printf.c** : Rend executable la compilation via le fichier printf.c
+- **-o printf.c**: Makes the compilation executable via the printf.c file.
 
 
-### Teste de la fonction printf :
-Tester avec UBuntu 22.04 .
+### Testing the printf function:
+Tested with Ubuntu 22.04.
 
 ![Mon Image](./image.png)
 
 
 ### *Auteur :*
 
+The printf project was developped by :
 
-Le projet Printf a été développé :
-
-==> **[Mattieu MOUROUX](https://github.com/Mattieuuu)** -Devellopement de la fonction '_printf' 
+==> **[Mattieu MOUROUX](https://github.com/Mattieuuu)** -Developement of function '_printf', developement of README.md (traductor), developement of flowchart
 
 
-==> **[Aurélien GOAOC](https://github.com/Aurelien292)** -Devellopement de la fonction '_printf' , documentation du README.md
+==> **[Aurélien GOAOC](https://github.com/Aurelien292)** -Developement of function '_printf' , documentation of README.md, developement of flowchart, developement of the man page
+
