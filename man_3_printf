@@ -1,0 +1,35 @@
+.TH _printf
+.SH NAME
+\fB_printf\fP 
+.SH SYNOPSIS
+_printf ("FORMAT",[ARGUMENT]);
+.SH DESCRIPTION
+The format consists of regular text and format specifiers, which are placeholders for
+arguments to be printed. Format specifiers are preceded by the `%` character, and
+each specifier is replaced by the value of the corresponding argument.
+
+    The following format specifiers are supported:
+    %d   Print an integer.
+    %i   Print an integer
+    %c   Print a character.
+    %s   Print a string.
+    %%   Displays a literal percentage (`%`).
+    
+.SH RETURN VALUE
+When the operation completes successfully, _printf returns the number of characters written. Otherwise,
+a negative number is returned to indicate an error.
+
+.SH EXAMPLES
+Usage :
+
+    Formatting an integer:
+       _printf("The concert starts in %d minute\n", 20)
+       
+    Formatting a character:
+       _printf("Displays a character: %c\n", "A")
+       
+    Formatting a string:
+       _printf("%s\n", "This is our first project")
+       
+.SH AUTHORS
+Aurélien GOAOC & Mattieu MOUROUX
