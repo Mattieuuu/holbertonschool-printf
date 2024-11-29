@@ -94,7 +94,7 @@ Tested with Ubuntu 22.04.
 
 ### Flowcharts
 
-![Flowcharts](./flowcharts)
+![Flowcharts](./flowcharts.png)
 
 ### *Author :*
 
